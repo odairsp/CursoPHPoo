@@ -1,0 +1,16 @@
+{
+    "name": "t2v-05/curso-ph-poo",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "odairsp",
+            "email": "odair.sp@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
