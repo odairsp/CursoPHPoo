@@ -2,14 +2,16 @@
 
 namespace app\classes;
 
+use app\traits\ValidationFile;
+
 class Upload
 {
 
-    private $private = 'Private';
-    protected $protected = "protected";
-    public $file;
-    public $newName;
-    public $extensions;
+    use ValidationFile;
+
+    private $file;
+    private $newName;
+    protected $extensions;
 
     public function __construct($file)
     {
@@ -17,22 +19,19 @@ class Upload
         $this->rename();
     }
 
-    public function extension()
+    private function extension()
     {
 
         return pathinfo($this->file, PATHINFO_EXTENSION);
     }
 
-    public function rename()
+    private function rename()
     {
         $uniqId = uniqid(true);
         return  $this->newName = $uniqId . '.' . $this->extension();
     }
     public function upload()
     {
-        if (in_array(pathinfo($this->file, PATHINFO_EXTENSION), $this->extensions)) {
-
-            return $this->newName;
-        }
+       return $this->validation()?$this->newName:'ERRO extensão não permitida';
     }
 }

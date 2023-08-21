@@ -8,7 +8,6 @@ use app\classes\UploadFile;
 use app\classes\Pessoa;
 
 
-
 $pessoa = new Pessoa;
 
 $pessoa->name = "odair";
@@ -23,6 +22,3 @@ echo $atividadePessoa->falando();
 $uploadFoto = new UploadFoto('foto.png');
 echo $uploadFoto->upload();
 
-
-echo $uploadFoto->protect;
-echo $uploadFoto->privat;

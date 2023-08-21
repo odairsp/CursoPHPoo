@@ -2,7 +2,6 @@
 
 namespace app\classes;
 
-
 use app\classes\Upload;
 
 class UploadFile extends Upload
