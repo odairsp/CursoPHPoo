@@ -22,3 +22,4 @@ echo $atividadePessoa->falando();
 $uploadFoto = new UploadFoto('foto.png');
 echo $uploadFoto->upload();
 
+UploadFoto::teste();
